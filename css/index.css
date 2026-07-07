@@ -1,0 +1,174 @@
+
+/* 轮播图 */
+.swiper{
+    width: 1200px;
+    height: 560px;
+    position: relative;
+}
+
+.swiper li{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 1s;
+}
+
+/* 显示第一张图片 */
+.swiper li:first-child{
+    opacity: 1;
+}
+
+.swiper li a{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+.swiper li a img{
+    width: 100%;
+    height: 100%;
+}
+
+/* 左右箭头 */
+.direction{}
+
+.direction .icon-left{
+    left: 0;
+}
+
+.direction .icon-right{
+    right: 0;
+}
+
+.direction .icon-left,
+.direction .icon-right{
+    position: absolute;
+    top: 50%;
+    font-size: 80px;
+    color: #fff;
+    margin-top: -40px;
+    cursor: pointer;
+
+}
+
+.circle{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.circle span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #cdcdcd;
+    border: 2px solid #fff;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.circle span.active{
+    background: #707070;
+}
+
+/* 轮播图 end */
+
+/* 公司图文介绍 */
+.img-intro{
+    display: flex;
+}
+
+.img-intro .feature{
+    flex: 1;
+    height: 210px;
+    color: #fff;
+    text-align: center;
+}
+
+.img-intro .feature:nth-of-type(1){
+    background: url(../img/01.jpg) no-repeat;
+}
+.img-intro .feature:nth-of-type(2){
+    background: url(../img/02.jpg) no-repeat;
+}
+.img-intro .feature:nth-of-type(3){
+    background: url(../img/03.jpg) no-repeat;
+}
+.img-intro .feature h2{
+    padding: 10% 0 4%;
+    font-size: 20px;
+}
+
+.img-intro .feature p{
+    font-size: 14px;
+    padding: 0 10px;
+    line-height: 1.8;
+}
+
+/* 公司图文介绍 end */
+
+/* 产品展示 */
+/* .product-intro{} */
+
+.product-intro .title{
+    margin: 30px 0;
+    font-size: 27px;
+}
+
+.product-intro .title .major{
+    font-weight: bold;
+	color: #707070;
+}
+
+.product-intro .title .sup{
+    font-size: 22px;
+    color: aquamarine;
+}
+
+.product-img{
+    display: flex;
+}
+
+.product-img .product-left{
+    width: 500px;
+    margin-right: 10px;
+}
+
+.product-img .product-left img{
+    width: 100%;
+}
+
+.product-img .product-right{
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-right li{
+    width: 33%;
+    height: 160px;
+}
+
+.product-right li img{
+    width: 100%;
+    height: 100%;
+}
+
+/* 产品展示 end */
+
+/* 家具展示 */
+.house{
+    min-width: 1200px;
+}
+
+.house img{
+    width: 100%;
+}
+
+/* 家具展示 end */

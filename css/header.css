@@ -1,0 +1,93 @@
+header{
+    background: #333;
+    min-width: max-content;
+}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header .container{
+    height: 40px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-right{
+    display: flex;
+    align-items: center;
+}
+
+.header-right>div{
+    margin-right: 15px;
+}
+
+.header-right>div:last-child{
+    margin-right: 0;
+}
+
+.header-right .icon-eamil{
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+
+
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+	background-color: bisque;
+	width: 100%;
+}
+
+.nav-img{
+    font-size: 0;
+}
+
+.nav-img img{
+    width: 180px;
+}
+
+.nav-text {
+    display: flex;
+    justify-content: center; /* 让子元素（也就是各个li中的a标签）在主轴方向居中 */
+    align-items: center; /* 让子元素在交叉轴方向也居中，一般对于水平布局的导航栏，这个属性也能起到辅助的垂直居中效果 */
+    margin: 0 auto; /* 可以进一步确保整个导航文本部分在其父容器中水平居中，非必需，根据实际页面布局需求决定是否添加 */
+}
+
+.nav-text li{
+    margin: 0 30px;
+    font-size: 22px;
+}
+
+.nav-text li a{
+    color: black;
+    transition: all .2s;
+	text-decoration: none;
+}
+
+.nav-text li:hover >a{
+    font-weight: bold;
+    color: red;
+	text-decoration: none;
+}

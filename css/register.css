@@ -1,0 +1,121 @@
+.banner{
+    min-width: 1200px;
+    width: 100%;
+}
+
+.banner img{
+    width: 100%;
+}
+
+.word-tips{
+    border-bottom: 1px solid #f3f3f3;
+    color: #818388;
+    font-size: 12px;
+    padding: 15px 0;
+    margin-bottom: 10px;
+}
+
+.line{
+    border-bottom: 3px solid rgb(32, 189, 216);
+    padding-bottom: 15px;
+}
+
+.content{
+    height: 670px;
+    background: url(../img/注册.jpg);
+    background-size: cover;
+    /* 或者background-size: contain; */
+    background-repeat: no-repeat;
+
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.title{
+    margin: 30px 0 20px;
+    font-size: 42px;
+    text-align: center;
+
+}
+
+.register-box{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.row{
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.row .text{
+    flex: 0 0 80px;
+    text-align: right;
+    margin-right: 25px;
+}
+
+.row input{
+    width: 370px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 0 10px;
+    font-size: 14px;
+    color: #cdcdcd;
+}
+
+.row input[type="radio"]{
+    width: auto;
+    height: auto;
+}
+
+/* 验证码样式 */
+.row .codeImg{
+    width: 120px;
+    margin-left: 10px;
+}
+
+.row .code{
+    width: 220px;
+}
+
+.row .error-tip{
+    color: red;
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.row .right-tip{
+    color: aquamarine;
+}
+
+.row .register{
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    background: skyblue;
+    font-size: 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 54px;
+}
+
+.last{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.last .tips{
+    font-size: 14px;
+    margin-right: 50px;
+    color: #818388;
+}
+
+.last .tips a{
+    color: skyblue;
+}

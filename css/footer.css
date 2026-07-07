@@ -1,0 +1,40 @@
+footer{
+    background: #000;
+    color: #fff;
+    min-width: max-content;
+}
+
+footer .container{
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0 60px;
+}
+
+footer .container>*{
+    line-height: 2;
+}
+
+.seach h2{
+    font-size: 20px;
+}
+
+.input input{
+    height: 20px;
+}
+
+.submit{
+    display: inline-block;
+    width: 35px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    background: #fff;
+    color: #000;
+}
+
+.bottom{
+    background: rgb(79, 79, 76);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+}

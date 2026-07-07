@@ -1,0 +1,110 @@
+.word{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    z-index: 999;
+    transition: 1.5s;
+}
+.banner{
+    min-width: 1200px;
+    width: 100%;
+}
+.banner img{
+    width: 100%;
+}
+
+.word-tips{
+    border-bottom: 1px solid #f3f3f3;
+    color: #818388;
+    font-size: 12px;
+    padding: 15px 0;
+    margin-bottom: 10px;
+}
+
+.container>.title{
+    font-size: 32px;
+    margin: 10px 0 35px;
+}
+
+.line{
+    border-bottom: 3px solid rgb(32, 189, 216);
+    padding-bottom: 15px;
+}
+
+.content{
+    height: 500px;
+    background: url(../img/登录.jpg) no-repeat center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-center{
+    background: rgba(255, 255, 255, 0.8);
+    width: 700px;
+    height: 400px;
+    box-sizing: border-box;
+    padding: 100px 0 10px;
+    border-radius: 10px;
+}
+
+.username,
+.password{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.username span,
+.password span{
+    flex: 0 0 70px;
+    font-weight: bold;
+}
+
+.username input,
+.password input{
+    width: 300px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+.password .eye{
+    position: absolute;
+    margin-right: -325px;
+    opacity: 0.4;
+    cursor: pointer;
+} 
+
+.password .eye img{
+    width: 25px;
+}
+
+.login_submit{
+    display: flex;
+    justify-content: center;
+}
+
+.login_submit .login,
+.login_submit .register{
+    width: 100px;
+    height: 50px;
+    background: orange;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.register a{
+    color: #fff;
+}
+
+.login{
+    margin-right: 60px;
+}
+
