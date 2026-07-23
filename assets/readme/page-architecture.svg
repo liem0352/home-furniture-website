@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" role="img" aria-labelledby="paTitle paDesc">
+  <title id="paTitle">精美家居企业网站 - 页面架构图</title>
+  <desc id="paDesc">页面架构示意:浏览器直接打开 index.html 作为主入口,通过 header.css 全站统一导航条链接到产品中心、登录、注册、在线留言、关于我们五个二级页面,每个页面下方标注其专属 JS 脚本(about.html 为纯静态,无脚本)。所有节点延续 site nav map motif,顶部带导航条横线。</desc>
+  <defs>
+    <style>
+      .sans { font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif; }
+      .mono { font-family: ui-monospace, 'SF Mono', 'Cascadia Mono', Menlo, Consolas, 'Courier New', monospace; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#A67C52"/>
+    </marker>
+    <marker id="arrowSage" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6B8E7F"/>
+    </marker>
+  </defs>
+
+  <!-- 背景 -->
+  <rect x="0" y="0" width="1200" height="320" rx="16" fill="#1F1B16"/>
+
+  <!-- 顶部 motif 横线 (site nav map motif) -->
+  <rect x="56" y="22" width="1088" height="1" fill="#A67C52" opacity="0.45"/>
+
+  <!-- 第1层:浏览器入口 + 主入口 index.html -->
+  <g transform="translate(600,40)">
+    <!-- 浏览器入口标识 -->
+    <text x="0" y="14" text-anchor="middle" class="mono" font-size="11" fill="#8B8276">浏览器直接打开</text>
+    <!-- 入口主卡片 -->
+    <rect x="-120" y="26" width="240" height="56" rx="6" fill="#2A251E" stroke="#A67C52" stroke-width="1.5"/>
+    <rect x="-110" y="34" width="220" height="3" rx="1" fill="#A67C52" opacity="0.85"/>
+    <text x="0" y="58" text-anchor="middle" class="sans" font-size="16" font-weight="600" fill="#EDE6D6">首页 index.html</text>
+    <text x="0" y="74" text-anchor="middle" class="mono" font-size="10" fill="#8B8276">轮播 / 产品推荐 / 企业介绍</text>
+  </g>
+
+  <!-- 连接线: index.html → header.css 导航条 -->
+  <path d="M600,122 L600,138" stroke="#A67C52" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- 第2层:header.css 全站统一导航条 -->
+  <g transform="translate(132,140)">
+    <rect x="0" y="0" width="936" height="34" rx="4" fill="#2A251E" stroke="#A67C52" stroke-width="1"/>
+    <rect x="8" y="6" width="920" height="3" rx="1" fill="#A67C52" opacity="0.7"/>
+    <text x="16" y="24" class="mono" font-size="11" fill="#A67C52">header.css</text>
+    <!-- nav 5 个链接点 -->
+    <circle cx="280" cy="18" r="3" fill="#6B8E7F"/>
+    <circle cx="436" cy="18" r="3" fill="#6B8E7F"/>
+    <circle cx="592" cy="18" r="3" fill="#6B8E7F"/>
+    <circle cx="748" cy="18" r="3" fill="#6B8E7F"/>
+    <circle cx="904" cy="18" r="3" fill="#6B8E7F"/>
+    <text x="280" y="50" text-anchor="middle" class="mono" font-size="9" fill="#8B8276">product</text>
+    <text x="436" y="50" text-anchor="middle" class="mono" font-size="9" fill="#8B8276">login</text>
+    <text x="592" y="50" text-anchor="middle" class="mono" font-size="9" fill="#8B8276">register</text>
+    <text x="748" y="50" text-anchor="middle" class="mono" font-size="9" fill="#8B8276">message</text>
+    <text x="904" y="50" text-anchor="middle" class="mono" font-size="9" fill="#8B8276">about</text>
+  </g>
+
+  <!-- 5 条分叉线: 导航条 → 二级页面 (从 nav 圆点位置垂直向下) -->
+  <path d="M412,190 L412,210" stroke="#6B8E7F" stroke-width="1.2" fill="none" marker-end="url(#arrowSage)"/>
+  <path d="M568,190 L568,210" stroke="#6B8E7F" stroke-width="1.2" fill="none" marker-end="url(#arrowSage)"/>
+  <path d="M724,190 L724,210" stroke="#6B8E7F" stroke-width="1.2" fill="none" marker-end="url(#arrowSage)"/>
+  <path d="M880,190 L880,210" stroke="#6B8E7F" stroke-width="1.2" fill="none" marker-end="url(#arrowSage)"/>
+  <path d="M1036,190 L1036,210" stroke="#6B8E7F" stroke-width="1.2" fill="none" marker-end="url(#arrowSage)"/>
+
+  <!-- 第3层:5 个二级页面卡片(横排,与上方箭头对齐) -->
+  <g transform="translate(0,212)">
+    <!-- product.html -->
+    <g transform="translate(328,0)">
+      <rect x="0" y="0" width="168" height="44" rx="6" fill="#2A251E" stroke="#A67C52" stroke-width="1"/>
+      <rect x="8" y="6" width="152" height="2.5" rx="1" fill="#A67C52" opacity="0.75"/>
+      <text x="84" y="26" text-anchor="middle" class="sans" font-size="12" fill="#EDE6D6">产品中心</text>
+      <text x="84" y="38" text-anchor="middle" class="mono" font-size="9" fill="#8B8276">product.html</text>
+    </g>
+    <!-- login.html -->
+    <g transform="translate(484,0)">
+      <rect x="0" y="0" width="168" height="44" rx="6" fill="#2A251E" stroke="#A67C52" stroke-width="1"/>
+      <rect x="8" y="6" width="152" height="2.5" rx="1" fill="#A67C52" opacity="0.75"/>
+      <text x="84" y="26" text-anchor="middle" class="sans" font-size="12" fill="#EDE6D6">登录</text>
+      <text x="84" y="38" text-anchor="middle" class="mono" font-size="9" fill="#8B8276">login.html</text>
+    </g>
+    <!-- register.html -->
+    <g transform="translate(640,0)">
+      <rect x="0" y="0" width="168" height="44" rx="6" fill="#2A251E" stroke="#A67C52" stroke-width="1"/>
+      <rect x="8" y="6" width="152" height="2.5" rx="1" fill="#A67C52" opacity="0.75"/>
+      <text x="84" y="26" text-anchor="middle" class="sans" font-size="12" fill="#EDE6D6">注册</text>
+      <text x="84" y="38" text-anchor="middle" class="mono" font-size="9" fill="#8B8276">register.html</text>
+    </g>
+    <!-- message.html -->
+    <g transform="translate(796,0)">
+      <rect x="0" y="0" width="168" height="44" rx="6" fill="#2A251E" stroke="#A67C52" stroke-width="1"/>
+      <rect x="8" y="6" width="152" height="2.5" rx="1" fill="#A67C52" opacity="0.75"/>
+      <text x="84" y="26" text-anchor="middle" class="sans" font-size="12" fill="#EDE6D6">在线留言</text>
+      <text x="84" y="38" text-anchor="middle" class="mono" font-size="9" fill="#8B8276">message.html</text>
+    </g>
+    <!-- about.html -->
+    <g transform="translate(952,0)">
+      <rect x="0" y="0" width="168" height="44" rx="6" fill="#2A251E" stroke="#A67C52" stroke-width="1"/>
+      <rect x="8" y="6" width="152" height="2.5" rx="1" fill="#A67C52" opacity="0.75"/>
+      <text x="84" y="26" text-anchor="middle" class="sans" font-size="12" fill="#EDE6D6">关于我们</text>
+      <text x="84" y="38" text-anchor="middle" class="mono" font-size="9" fill="#8B8276">about.html</text>
+    </g>
+  </g>
+
+  <!-- 第4层:对应 JS 脚本(about 无 JS,标"静态") -->
+  <g transform="translate(0,272)">
+    <!-- product.js -->
+    <g transform="translate(412,0)">
+      <rect x="-50" y="0" width="100" height="22" rx="3" fill="#1F1B16" stroke="#6B8E7F" stroke-opacity="0.6"/>
+      <text x="0" y="15" text-anchor="middle" class="mono" font-size="10" fill="#6B8E7F">product.js</text>
+    </g>
+    <!-- login.js -->
+    <g transform="translate(568,0)">
+      <rect x="-50" y="0" width="100" height="22" rx="3" fill="#1F1B16" stroke="#6B8E7F" stroke-opacity="0.6"/>
+      <text x="0" y="15" text-anchor="middle" class="mono" font-size="10" fill="#6B8E7F">login.js</text>
+    </g>
+    <!-- register.js -->
+    <g transform="translate(724,0)">
+      <rect x="-50" y="0" width="100" height="22" rx="3" fill="#1F1B16" stroke="#6B8E7F" stroke-opacity="0.6"/>
+      <text x="0" y="15" text-anchor="middle" class="mono" font-size="10" fill="#6B8E7F">register.js</text>
+    </g>
+    <!-- message.js -->
+    <g transform="translate(880,0)">
+      <rect x="-50" y="0" width="100" height="22" rx="3" fill="#1F1B16" stroke="#6B8E7F" stroke-opacity="0.6"/>
+      <text x="0" y="15" text-anchor="middle" class="mono" font-size="10" fill="#6B8E7F">message.js</text>
+    </g>
+    <!-- about 静态 -->
+    <g transform="translate(1036,0)">
+      <rect x="-50" y="0" width="100" height="22" rx="3" fill="#1F1B16" stroke="#8B8276" stroke-opacity="0.6" stroke-dasharray="3,2"/>
+      <text x="0" y="15" text-anchor="middle" class="mono" font-size="10" fill="#8B8276">静态 · 无 JS</text>
+    </g>
+  </g>
+
+  <!-- 连接线: 页面卡片 → JS 脚本 -->
+  <path d="M412,256 L412,272" stroke="#6B8E7F" stroke-width="1" fill="none" opacity="0.5"/>
+  <path d="M568,256 L568,272" stroke="#6B8E7F" stroke-width="1" fill="none" opacity="0.5"/>
+  <path d="M724,256 L724,272" stroke="#6B8E7F" stroke-width="1" fill="none" opacity="0.5"/>
+  <path d="M880,256 L880,272" stroke="#6B8E7F" stroke-width="1" fill="none" opacity="0.5"/>
+  <path d="M1036,256 L1036,272" stroke="#8B8276" stroke-width="1" stroke-dasharray="2,2" fill="none" opacity="0.5"/>
+</svg>

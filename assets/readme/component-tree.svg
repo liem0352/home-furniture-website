@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" width="100%" role="img" aria-labelledby="ctTitle ctDesc">
+  <title id="ctTitle">精美家居企业网站 - 组件树与样式组织</title>
+  <desc id="ctDesc">真实组件树,按 CSS 文件组织:左侧为公共样式(reset.css 全局重置、header.css 顶部导航、footer.css 底部信息),右侧为六个页面专属 CSS 及其包含的组件(index.css 含轮播/产品推荐/企业介绍;product.css 含分类导航/产品网格;login.css 含登录表单;register.css 含注册表单;message.css 含留言表单/留言列表;about.css 含企业介绍)。延续 site nav map motif。</desc>
+  <defs>
+    <style>
+      .sans { font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif; }
+      .mono { font-family: ui-monospace, 'SF Mono', 'Cascadia Mono', Menlo, Consolas, 'Courier New', monospace; }
+    </style>
+  </defs>
+
+  <!-- 背景 -->
+  <rect x="0" y="0" width="1200" height="280" rx="16" fill="#1F1B16"/>
+
+  <!-- 顶部 motif 横线 (site nav map motif) -->
+  <rect x="56" y="22" width="1088" height="1" fill="#A67C52" opacity="0.45"/>
+
+  <!-- 列标题(无 eyebrow,纯标识) -->
+  <text x="56" y="48" class="sans" font-size="14" font-weight="600" fill="#EDE6D6">公共样式</text>
+  <text x="56" y="64" class="mono" font-size="10" fill="#8B8276">SHARED · 3 files</text>
+  <text x="304" y="48" class="sans" font-size="14" font-weight="600" fill="#EDE6D6">页面专属样式</text>
+  <text x="304" y="64" class="mono" font-size="10" fill="#8B8276">PAGE-SCOPED · 6 files · 9 components</text>
+
+  <!-- 中间垂直分隔线 -->
+  <line x1="280" y1="80" x2="280" y2="260" stroke="#A67C52" stroke-width="1" opacity="0.4" stroke-dasharray="3,3"/>
+
+  <!-- 左侧:公共样式 3 个文件 -->
+  <g transform="translate(56,84)">
+    <!-- reset.css -->
+    <g transform="translate(0,0)">
+      <rect x="0" y="0" width="200" height="44" rx="6" fill="#2A251E" stroke="#A67C52" stroke-width="1"/>
+      <rect x="8" y="6" width="184" height="2.5" rx="1" fill="#A67C52" opacity="0.75"/>
+      <text x="12" y="26" class="mono" font-size="13" fill="#EDE6D6">reset.css</text>
+      <text x="12" y="40" class="sans" font-size="10" fill="#8B8276">全局重置 · 盒模型 / 字体 / 边距</text>
+    </g>
+    <!-- header.css -->
+    <g transform="translate(0,56)">
+      <rect x="0" y="0" width="200" height="44" rx="6" fill="#2A251E" stroke="#A67C52" stroke-width="1"/>
+      <rect x="8" y="6" width="184" height="2.5" rx="1" fill="#A67C52" opacity="0.75"/>
+      <text x="12" y="26" class="mono" font-size="13" fill="#EDE6D6">header.css</text>
+      <text x="12" y="40" class="sans" font-size="10" fill="#8B8276">顶部导航 · 全站共用</text>
+    </g>
+    <!-- footer.css -->
+    <g transform="translate(0,112)">
+      <rect x="0" y="0" width="200" height="44" rx="6" fill="#2A251E" stroke="#A67C52" stroke-width="1"/>
+      <rect x="8" y="6" width="184" height="2.5" rx="1" fill="#A67C52" opacity="0.75"/>
+      <text x="12" y="26" class="mono" font-size="13" fill="#EDE6D6">footer.css</text>
+      <text x="12" y="40" class="sans" font-size="10" fill="#8B8276">底部信息 · 全站共用</text>
+    </g>
+  </g>
+
+  <!-- 右侧:6 个页面专属 CSS + 组件标签 -->
+  <g transform="translate(304,84)">
+
+    <!-- 行1: index.css -->
+    <g transform="translate(0,0)">
+      <rect x="0" y="0" width="160" height="28" rx="4" fill="#2A251E" stroke="#6B8E7F" stroke-opacity="0.7"/>
+      <text x="10" y="19" class="mono" font-size="11" fill="#EDE6D6">index.css</text>
+      <!-- 组件标签 -->
+      <rect x="172" y="4" width="78" height="20" rx="3" fill="#1F1B16" stroke="#A67C52" stroke-opacity="0.6"/>
+      <text x="211" y="18" text-anchor="middle" class="sans" font-size="10" fill="#A67C52">轮播组件</text>
+      <rect x="258" y="4" width="86" height="20" rx="3" fill="#1F1B16" stroke="#A67C52" stroke-opacity="0.6"/>
+      <text x="301" y="18" text-anchor="middle" class="sans" font-size="10" fill="#A67C52">产品推荐</text>
+      <rect x="352" y="4" width="86" height="20" rx="3" fill="#1F1B16" stroke="#A67C52" stroke-opacity="0.6"/>
+      <text x="395" y="18" text-anchor="middle" class="sans" font-size="10" fill="#A67C52">企业介绍</text>
+      <text x="730" y="18" class="mono" font-size="10" fill="#8B8276">→ index.js</text>
+    </g>
+
+    <!-- 行2: product.css -->
+    <g transform="translate(0,32)">
+      <rect x="0" y="0" width="160" height="28" rx="4" fill="#2A251E" stroke="#6B8E7F" stroke-opacity="0.7"/>
+      <text x="10" y="19" class="mono" font-size="11" fill="#EDE6D6">product.css</text>
+      <rect x="172" y="4" width="86" height="20" rx="3" fill="#1F1B16" stroke="#A67C52" stroke-opacity="0.6"/>
+      <text x="215" y="18" text-anchor="middle" class="sans" font-size="10" fill="#A67C52">分类导航</text>
+      <rect x="266" y="4" width="86" height="20" rx="3" fill="#1F1B16" stroke="#A67C52" stroke-opacity="0.6"/>
+      <text x="309" y="18" text-anchor="middle" class="sans" font-size="10" fill="#A67C52">产品网格</text>
+      <text x="730" y="18" class="mono" font-size="10" fill="#8B8276">→ product.js</text>
+    </g>
+
+    <!-- 行3: login.css -->
+    <g transform="translate(0,64)">
+      <rect x="0" y="0" width="160" height="28" rx="4" fill="#2A251E" stroke="#6B8E7F" stroke-opacity="0.7"/>
+      <text x="10" y="19" class="mono" font-size="11" fill="#EDE6D6">login.css</text>
+      <rect x="172" y="4" width="86" height="20" rx="3" fill="#1F1B16" stroke="#A67C52" stroke-opacity="0.6"/>
+      <text x="215" y="18" text-anchor="middle" class="sans" font-size="10" fill="#A67C52">登录表单</text>
+      <text x="730" y="18" class="mono" font-size="10" fill="#8B8276">→ login.js</text>
+    </g>
+
+    <!-- 行4: register.css -->
+    <g transform="translate(0,96)">
+      <rect x="0" y="0" width="160" height="28" rx="4" fill="#2A251E" stroke="#6B8E7F" stroke-opacity="0.7"/>
+      <text x="10" y="19" class="mono" font-size="11" fill="#EDE6D6">register.css</text>
+      <rect x="172" y="4" width="86" height="20" rx="3" fill="#1F1B16" stroke="#A67C52" stroke-opacity="0.6"/>
+      <text x="215" y="18" text-anchor="middle" class="sans" font-size="10" fill="#A67C52">注册表单</text>
+      <text x="730" y="18" class="mono" font-size="10" fill="#8B8276">→ register.js</text>
+    </g>
+
+    <!-- 行5: message.css -->
+    <g transform="translate(0,128)">
+      <rect x="0" y="0" width="160" height="28" rx="4" fill="#2A251E" stroke="#6B8E7F" stroke-opacity="0.7"/>
+      <text x="10" y="19" class="mono" font-size="11" fill="#EDE6D6">message.css</text>
+      <rect x="172" y="4" width="86" height="20" rx="3" fill="#1F1B16" stroke="#A67C52" stroke-opacity="0.6"/>
+      <text x="215" y="18" text-anchor="middle" class="sans" font-size="10" fill="#A67C52">留言表单</text>
+      <rect x="266" y="4" width="86" height="20" rx="3" fill="#1F1B16" stroke="#A67C52" stroke-opacity="0.6"/>
+      <text x="309" y="18" text-anchor="middle" class="sans" font-size="10" fill="#A67C52">留言列表</text>
+      <text x="730" y="18" class="mono" font-size="10" fill="#8B8276">→ message.js</text>
+    </g>
+
+    <!-- 行6: about.css -->
+    <g transform="translate(0,160)">
+      <rect x="0" y="0" width="160" height="28" rx="4" fill="#2A251E" stroke="#6B8E7F" stroke-opacity="0.7"/>
+      <text x="10" y="19" class="mono" font-size="11" fill="#EDE6D6">about.css</text>
+      <rect x="172" y="4" width="86" height="20" rx="3" fill="#1F1B16" stroke="#A67C52" stroke-opacity="0.6"/>
+      <text x="215" y="18" text-anchor="middle" class="sans" font-size="10" fill="#A67C52">企业介绍</text>
+      <text x="730" y="18" class="mono" font-size="10" fill="#8B8276">→ 静态 · 无 JS</text>
+    </g>
+  </g>
+</svg>

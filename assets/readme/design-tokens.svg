@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240" width="100%" role="img" aria-labelledby="dtTitle dtDesc">
+  <title id="dtTitle">精美家居企业网站 - 设计令牌</title>
+  <desc id="dtDesc">设计令牌可视化,四个区块横向并列:色板(深木色背景 / 卡片底 / 暖米白前景 / 中木色灰次要 / 木纹棕主色 / 鼠尾草绿强调 共 6 色)、字号阶(10/12/14/18/28/44)、圆角阶(2/4/6/14/26)、间距阶(8/16/24/40/56)。所有令牌均来自项目实际使用的色板与尺度。</desc>
+  <defs>
+    <style>
+      .sans { font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif; }
+      .mono { font-family: ui-monospace, 'SF Mono', 'Cascadia Mono', Menlo, Consolas, 'Courier New', monospace; }
+    </style>
+  </defs>
+
+  <!-- 背景 -->
+  <rect x="0" y="0" width="1200" height="240" rx="16" fill="#1F1B16"/>
+
+  <!-- 顶部 motif 横线 -->
+  <rect x="56" y="22" width="1088" height="1" fill="#A67C52" opacity="0.45"/>
+
+  <!-- 区块 1: 色板 -->
+  <g transform="translate(56,38)">
+    <text x="0" y="14" class="sans" font-size="13" font-weight="600" fill="#EDE6D6">色板</text>
+    <text x="0" y="30" class="mono" font-size="10" fill="#8B8276">PALETTE · 6 colors</text>
+    <!-- 2x3 网格色块 -->
+    <g transform="translate(0,40)">
+      <!-- 行1 -->
+      <g transform="translate(0,0)">
+        <rect x="0" y="0" width="22" height="22" rx="3" fill="#1F1B16" stroke="#A67C52" stroke-opacity="0.6"/>
+        <text x="30" y="14" class="sans" font-size="11" fill="#EDE6D6">背景</text>
+        <text x="30" y="24" class="mono" font-size="9" fill="#8B8276">#1F1B16</text>
+      </g>
+      <g transform="translate(120,0)">
+        <rect x="0" y="0" width="22" height="22" rx="3" fill="#2A251E" stroke="#A67C52" stroke-opacity="0.6"/>
+        <text x="30" y="14" class="sans" font-size="11" fill="#EDE6D6">卡片底</text>
+        <text x="30" y="24" class="mono" font-size="9" fill="#8B8276">#2A251E</text>
+      </g>
+      <!-- 行2 -->
+      <g transform="translate(0,32)">
+        <rect x="0" y="0" width="22" height="22" rx="3" fill="#EDE6D6"/>
+        <text x="30" y="14" class="sans" font-size="11" fill="#EDE6D6">前景</text>
+        <text x="30" y="24" class="mono" font-size="9" fill="#8B8276">#EDE6D6</text>
+      </g>
+      <g transform="translate(120,32)">
+        <rect x="0" y="0" width="22" height="22" rx="3" fill="#8B8276"/>
+        <text x="30" y="14" class="sans" font-size="11" fill="#EDE6D6">次要</text>
+        <text x="30" y="24" class="mono" font-size="9" fill="#8B8276">#8B8276</text>
+      </g>
+      <!-- 行3 -->
+      <g transform="translate(0,64)">
+        <rect x="0" y="0" width="22" height="22" rx="3" fill="#A67C52"/>
+        <text x="30" y="14" class="sans" font-size="11" fill="#EDE6D6">主色 / 木纹棕</text>
+        <text x="30" y="24" class="mono" font-size="9" fill="#8B8276">#A67C52</text>
+      </g>
+      <g transform="translate(120,64)">
+        <rect x="0" y="0" width="22" height="22" rx="3" fill="#6B8E7F"/>
+        <text x="30" y="14" class="sans" font-size="11" fill="#EDE6D6">强调 / 鼠尾草绿</text>
+        <text x="30" y="24" class="mono" font-size="9" fill="#8B8276">#6B8E7F</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- 区块 2: 字号阶 -->
+  <g transform="translate(334,38)">
+    <text x="0" y="14" class="sans" font-size="13" font-weight="600" fill="#EDE6D6">字号阶</text>
+    <text x="0" y="30" class="mono" font-size="10" fill="#8B8276">TYPE SCALE · 6 steps</text>
+    <g transform="translate(0,46)">
+      <text x="0" y="10" class="mono" font-size="10" fill="#EDE6D6">Aa</text>
+      <text x="32" y="10" class="mono" font-size="10" fill="#8B8276">10 · 标签</text>
+      <text x="0" y="32" class="mono" font-size="12" fill="#EDE6D6">Aa</text>
+      <text x="32" y="32" class="mono" font-size="10" fill="#8B8276">12 · 次要</text>
+      <text x="0" y="56" class="sans" font-size="14" fill="#EDE6D6">Aa</text>
+      <text x="32" y="56" class="mono" font-size="10" fill="#8B8276">14 · 正文</text>
+      <text x="0" y="82" class="sans" font-size="18" fill="#EDE6D6">Aa</text>
+      <text x="32" y="82" class="mono" font-size="10" fill="#8B8276">18 · 副标题</text>
+      <text x="0" y="112" class="sans" font-size="28" font-weight="600" fill="#EDE6D6">Aa</text>
+      <text x="40" y="112" class="mono" font-size="10" fill="#8B8276">28 · 章节标题</text>
+      <text x="0" y="152" class="sans" font-size="44" font-weight="700" fill="#A67C52">Aa</text>
+      <text x="56" y="152" class="mono" font-size="10" fill="#8B8276">44 · 显示字</text>
+    </g>
+  </g>
+
+  <!-- 区块 3: 圆角阶 -->
+  <g transform="translate(612,38)">
+    <text x="0" y="14" class="sans" font-size="13" font-weight="600" fill="#EDE6D6">圆角阶</text>
+    <text x="0" y="30" class="mono" font-size="10" fill="#8B8276">RADIUS · 5 steps</text>
+    <g transform="translate(0,46)">
+      <g transform="translate(0,0)">
+        <rect x="0" y="0" width="32" height="20" rx="2" fill="#2A251E" stroke="#A67C52" stroke-opacity="0.7"/>
+        <text x="42" y="14" class="mono" font-size="10" fill="#8B8276">2 · 标签</text>
+      </g>
+      <g transform="translate(0,30)">
+        <rect x="0" y="0" width="32" height="20" rx="4" fill="#2A251E" stroke="#A67C52" stroke-opacity="0.7"/>
+        <text x="42" y="14" class="mono" font-size="10" fill="#8B8276">4 · 输入框</text>
+      </g>
+      <g transform="translate(0,60)">
+        <rect x="0" y="0" width="32" height="20" rx="6" fill="#2A251E" stroke="#A67C52" stroke-opacity="0.7"/>
+        <text x="42" y="14" class="mono" font-size="10" fill="#8B8276">6 · 卡片</text>
+      </g>
+      <g transform="translate(0,90)">
+        <rect x="0" y="0" width="32" height="20" rx="14" fill="#2A251E" stroke="#A67C52" stroke-opacity="0.7"/>
+        <text x="42" y="14" class="mono" font-size="10" fill="#8B8276">14 · 区块</text>
+      </g>
+      <g transform="translate(0,120)">
+        <rect x="0" y="0" width="32" height="20" rx="26" fill="#A67C52" stroke="#A67C52" stroke-opacity="0.7"/>
+        <text x="42" y="14" class="mono" font-size="10" fill="#8B8276">26 · Hero 容器</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- 区块 4: 间距阶 -->
+  <g transform="translate(890,38)">
+    <text x="0" y="14" class="sans" font-size="13" font-weight="600" fill="#EDE6D6">间距阶</text>
+    <text x="0" y="30" class="mono" font-size="10" fill="#8B8276">SPACING · 5 steps</text>
+    <g transform="translate(0,46)">
+      <g transform="translate(0,0)">
+        <rect x="0" y="6" width="8" height="8" rx="1" fill="#6B8E7F" opacity="0.7"/>
+        <text x="16" y="14" class="mono" font-size="10" fill="#8B8276">8 · 元素内</text>
+      </g>
+      <g transform="translate(0,24)">
+        <rect x="0" y="4" width="16" height="12" rx="1" fill="#6B8E7F" opacity="0.7"/>
+        <text x="24" y="14" class="mono" font-size="10" fill="#8B8276">16 · 组件内</text>
+      </g>
+      <g transform="translate(0,48)">
+        <rect x="0" y="2" width="24" height="16" rx="1" fill="#6B8E7F" opacity="0.7"/>
+        <text x="32" y="14" class="mono" font-size="10" fill="#8B8276">24 · 组件间</text>
+      </g>
+      <g transform="translate(0,72)">
+        <rect x="0" y="0" width="40" height="20" rx="1" fill="#A67C52" opacity="0.7"/>
+        <text x="48" y="14" class="mono" font-size="10" fill="#8B8276">40 · 区段内</text>
+      </g>
+      <g transform="translate(0,100)">
+        <rect x="0" y="0" width="56" height="24" rx="1" fill="#A67C52" opacity="0.9"/>
+        <text x="64" y="16" class="mono" font-size="10" fill="#8B8276">56 · 边距 / 区段间</text>
+      </g>
+    </g>
+  </g>
+</svg>
