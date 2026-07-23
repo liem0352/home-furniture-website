@@ -1,116 +1,121 @@
+<p align="center">
+  <img src="assets/readme/hero.svg" alt="精美家居企业网站 — 前端项目 README Hero:左侧项目标题与技术栈,右侧首页/产品/登录/留言四个核心页面缩略图墙" width="100%"/>
+</p>
+
 # 精美家居企业网站
 
-> 作者：liem
+> 纯前端家居企业站点 — 首页、产品中心、登录注册、在线留言、企业介绍,基于 HTML5 / CSS3 / 原生 JavaScript 与 Iconfont 矢量图标构建,浏览器直接打开即可运行。
 
-## 项目简介
+## 这是什么
 
-精美家居企业网站是一个纯前端项目，使用 HTML + CSS + JavaScript 构建，展示家居企业的产品与服务。网站包含首页、产品中心、登录注册、在线留言和关于我们等模块，是一个完整的企业宣传网站。
+一个面向家居企业的纯前端展示站点,覆盖企业宣传、产品分类浏览、用户登录注册与在线留言等核心场景。无后端、无构建步骤,克隆仓库后用浏览器打开 `index.html` 即可完整预览。
 
-## 功能模块
+## 页面与资源
 
-### 首页（index.html）
-- 顶部欢迎栏：联系电话、邮箱、日期展示
-- 导航栏：Logo + 菜单（首页、产品中心、关于我们、登录注册、在线留言）
-- 轮播图：首页 Banner 轮播展示
-- 产品推荐：精选家居产品展示
-- 企业介绍：公司简介与特色
-- 底部信息：版权与联系方式
+<p align="center">
+  <img src="assets/readme/section-pages.svg" alt="功能页面结构示意图:首页、产品中心、登录、注册、在线留言、关于我们六个页面卡片" width="100%"/>
+</p>
 
-### 产品中心（product.html）
-- 产品分类展示：床、椅、桌、柜等家居品类
-- 产品详情：图片、名称、价格、描述
-- 产品筛选：按分类筛选
+| 页面 | 文件 | 职责 |
+| --- | --- | --- |
+| 首页 | `index.html` | 欢迎栏 / 导航 / 轮播 / 产品推荐 / 企业介绍 / 底部 |
+| 产品中心 | `product.html` | 产品分类(床 / 椅 / 桌 / 柜)与网格展示 |
+| 登录 | `login.html` | 用户登录表单与字段校验 |
+| 注册 | `register.html` | 新用户注册表单与字段校验 |
+| 在线留言 | `message.html` | 留言表单与留言列表 |
+| 关于我们 | `about.html` | 企业介绍页面 |
 
-### 登录注册
-- `login.html`：用户登录页面
-- `register.html`：新用户注册页面
-- 表单验证：用户名、密码格式校验
+### 样式表(共 9 个,每页独立)
 
-### 在线留言（message.html）
-- 留言表单：姓名、邮箱、留言内容
-- 留言展示：展示用户留言列表
+- `css/reset.css` — 全局重置(盒模型 / 字体 / 边距)
+- `css/header.css` / `css/footer.css` — 公共头部与底部
+- `css/index.css` / `css/product.css` / `css/login.css` / `css/register.css` / `css/message.css` / `css/about.css` — 各页专属样式
 
-### 关于我们（about.html）
-- 企业简介：公司历史与文化
-- 企业团队：团队成员介绍
-- 联系方式：地址、电话、邮箱
+### 脚本(共 5 个,原生 JS)
 
-## 技术栈
+- `js/index.js` — 首页轮播切换与自动播放
+- `js/product.js` — 产品分类筛选与网格更新
+- `js/login.js` / `js/register.js` — 登录注册表单校验
+- `js/message.js` — 留言追加与列表渲染
 
-| 技术 | 用途 |
-|------|------|
-| HTML5 | 页面结构 |
-| CSS3 | 样式设计（Flexbox + Grid 布局） |
-| 原生 JavaScript | 交互逻辑与表单验证 |
-| Iconfont | 阿里巴巴矢量字体图标 |
+### 图片资源
 
-## 页面样式
+- 站点标识:`img/logo.png`
+- 首页轮播:`img/banner.jpg`、`img/banner1.jpg`、`img/banner2.jpg`、`img/banner3.jpg`
+- 产品分类:`img/bed.png`(床)、`img/chair.png`(椅)、`img/table.png`(桌)、`img/cupboard.png`(柜)
 
-每个页面都有独立的样式文件，便于维护：
+## 设计要点
 
-| 样式文件 | 说明 |
-|---------|------|
-| `reset.css` | 样式重置，消除浏览器默认样式 |
-| `header.css` | 顶部欢迎栏与导航栏样式 |
-| `footer.css` | 底部信息区域样式 |
-| `index.css` | 首页样式（轮播图、产品推荐等） |
-| `product.css` | 产品中心样式 |
-| `login.css` | 登录页样式 |
-| `register.css` | 注册页样式 |
-| `message.css` | 留言页样式 |
-| `about.css` | 关于我们页样式 |
+### 响应式布局
+CSS3 Flexbox 与 Grid 配合,适配桌面与移动端宽度。断点以内容可读性为准,不依赖重型前端框架。
 
-## 项目结构
+### Iconfont 矢量图标
+统一通过 Iconfont 引入矢量图标,与位图资源解耦,任意缩放不失真,色调可跟随 CSS 变量调整。
 
-```
-├── index.html              # 首页
-├── product.html            # 产品中心
-├── login.html              # 登录页
-├── register.html           # 注册页
-├── message.html            # 在线留言
-├── about.html              # 关于我们
-├── css/                    # 样式文件
-│   ├── reset.css           # 样式重置
-│   ├── header.css          # 头部样式
-│   ├── footer.css          # 底部样式
-│   ├── index.css           # 首页样式
-│   ├── product.css         # 产品页样式
-│   ├── login.css           # 登录页样式
-│   ├── register.css        # 注册页样式
-│   ├── message.css         # 留言页样式
-│   └── about.css           # 关于我们样式
-├── js/                     # 脚本文件
-│   ├── index.js            # 首页脚本（轮播图等）
-│   ├── login.js            # 登录脚本
-│   ├── register.js         # 注册脚本
-│   ├── message.js          # 留言脚本
-│   └── product.js          # 产品页脚本
-└── img/                    # 图片资源
-    ├── logo.png            # 网站 Logo
-    ├── banner.jpg          # 首页 Banner
-    ├── banner1.jpg         # 轮播图 1
-    ├── banner2.jpg         # 轮播图 2
-    ├── banner3.jpg         # 轮播图 3
-    ├── bed.png             # 床产品图
-    ├── chair.png           # 椅子产品图
-    ├── table.png           # 桌子产品图
-    ├── cupboard.png        # 柜子产品图
-    └── ...                 # 其他图片
+### 模块化样式
+每个页面拥有独立 CSS 文件,公共部分(重置 / 头部 / 底部)单独抽离,避免样式互相污染,便于按页维护与迭代。
+
+### 表单验证
+登录、注册、留言表单均在原生 JS 中实现字段校验(非空、格式、一致性),错误提示就地展示,不依赖第三方校验库。
+
+## 页面结构与交互逻辑
+
+```text
+站点结构
+├── index.html ─── 轮播 (index.js) + 产品推荐 + 企业介绍
+├── product.html ── 分类导航 + 产品网格 (product.js)
+├── login.html ──── 表单校验 (login.js)
+├── register.html ─ 表单校验 (register.js)
+├── message.html ── 留言表单 + 列表 (message.js)
+└── about.html ──── 企业介绍 (静态)
+
+样式组织
+├── reset.css ───── 全局重置(盒模型 / 字体 / 边距)
+├── header.css ──── 顶部导航(全站共用)
+├── footer.css ──── 底部信息(全站共用)
+└── *.css ───────── 各页专属样式(按页隔离)
+
+交互逻辑
+├── index.js ────── 轮播切换 / 自动播放
+├── product.js ──── 分类筛选 / 网格更新
+├── login.js ────── 字段校验 / 提交拦截
+├── register.js ─── 字段校验 / 一致性检查
+└── message.js ──── 留言追加 / 列表渲染
 ```
 
-## 使用方式
+## 快速开始
 
-直接在浏览器中打开 `index.html` 即可预览。
+无需安装依赖,无需构建步骤。
 
-无需安装任何依赖，所有资源均为本地文件。
+```bash
+# 1. 克隆仓库
+git clone https://github.com/liem0352/home-furniture-website.git
 
-## 设计特点
+# 2. 进入目录
+cd home-furniture-website
 
-- **响应式布局**：适配不同屏幕尺寸
-- **Iconfont 图标**：使用阿里巴巴矢量图标库，清晰可缩放
-- **模块化样式**：每个页面独立样式文件，便于维护
-- **表单验证**：前端 JavaScript 表单校验
+# 3. 直接用浏览器打开首页
+#    Windows: start index.html
+#    macOS:   open index.html
+#    Linux:   xdg-open index.html
+```
 
-## 许可证
+或直接在文件管理器中双击 `index.html`,即可在默认浏览器中预览全部页面。
 
-MIT License
+## 兼容性
+
+- 现代浏览器最新版:Chrome / Edge / Firefox / Safari
+- 依赖 CSS Flexbox / Grid 与 ES5+ 语法,不支持 IE
+
+## 资源清单
+
+| 类别 | 数量 | 说明 |
+| --- | --- | --- |
+| HTML 页面 | 6 | index / product / login / register / message / about |
+| 样式表 | 9 | reset / header / footer + 6 页专属 |
+| 脚本 | 5 | index / product / login / register / message |
+| 图片资源 | 12+ | logo / banner 系列 / 产品分类图等 |
+
+## License
+
+MIT License — 作者 **liem**。本仓库代码与资源可自由用于学习与商业参考,引用时请保留作者署名。

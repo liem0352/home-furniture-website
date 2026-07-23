@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 140" width="100%" role="img" aria-labelledby="spTitle spDesc">
+  <title id="spTitle">精美家居企业网站 — 功能页面结构</title>
+  <desc id="spDesc">六个功能页面的横向结构示意:首页、产品中心、登录、注册、在线留言、关于我们。每个页面卡片顶部带导航条横线,体现全站统一的页面导航栏结构,下方标注真实文件名与中文名称,配简化矢量图标(房子/网格/锁/人/气泡/i)。</desc>
+  <defs>
+    <style>
+      .sans { font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif; }
+      .mono { font-family: ui-monospace, 'SF Mono', 'Cascadia Mono', Menlo, Consolas, 'Courier New', monospace; }
+    </style>
+  </defs>
+
+  <!-- 背景 -->
+  <rect x="0" y="0" width="1200" height="140" rx="14" fill="#1F1B16"/>
+
+  <!-- 章节小标签 -->
+  <text x="100" y="28" class="mono" font-size="12" fill="#8B8276" letter-spacing="1.2">功能页面 · SITE PAGES</text>
+
+  <!-- 6 个页面卡片(顶部统一导航条横线 = site nav map motif) -->
+  <g transform="translate(100,40)">
+
+    <!-- 1. 首页 -->
+    <g transform="translate(0,0)">
+      <rect x="0" y="0" width="160" height="80" rx="6" fill="#2A251E" stroke="#A67C52" stroke-width="1"/>
+      <rect x="8" y="8" width="144" height="3" rx="1" fill="#A67C52" opacity="0.7"/>
+      <path d="M62,40 L80,26 L98,40" stroke="#EDE6D6" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+      <rect x="68" y="40" width="24" height="14" stroke="#EDE6D6" stroke-width="1.5" fill="none"/>
+      <rect x="76" y="46" width="8" height="8" fill="#A67C52"/>
+      <text x="80" y="68" text-anchor="middle" class="sans" font-size="12" fill="#EDE6D6">首页</text>
+      <text x="80" y="80" text-anchor="middle" class="mono" font-size="9" fill="#8B8276">index.html</text>
+    </g>
+
+    <!-- 2. 产品中心 -->
+    <g transform="translate(168,0)">
+      <rect x="0" y="0" width="160" height="80" rx="6" fill="#2A251E" stroke="#A67C52" stroke-width="1"/>
+      <rect x="8" y="8" width="144" height="3" rx="1" fill="#A67C52" opacity="0.7"/>
+      <rect x="66" y="26" width="12" height="12" rx="1" stroke="#6B8E7F" stroke-width="1.5" fill="none"/>
+      <rect x="82" y="26" width="12" height="12" rx="1" stroke="#6B8E7F" stroke-width="1.5" fill="none"/>
+      <rect x="66" y="42" width="12" height="12" rx="1" stroke="#6B8E7F" stroke-width="1.5" fill="none"/>
+      <rect x="82" y="42" width="12" height="12" rx="1" stroke="#6B8E7F" stroke-width="1.5" fill="none"/>
+      <text x="80" y="68" text-anchor="middle" class="sans" font-size="12" fill="#EDE6D6">产品中心</text>
+      <text x="80" y="80" text-anchor="middle" class="mono" font-size="9" fill="#8B8276">product.html</text>
+    </g>
+
+    <!-- 3. 登录 -->
+    <g transform="translate(336,0)">
+      <rect x="0" y="0" width="160" height="80" rx="6" fill="#2A251E" stroke="#A67C52" stroke-width="1"/>
+      <rect x="8" y="8" width="144" height="3" rx="1" fill="#A67C52" opacity="0.7"/>
+      <rect x="70" y="36" width="20" height="14" rx="2" fill="#A67C52" opacity="0.85"/>
+      <path d="M74,36 v-3 a6,6 0 0 1 12,0 v3" stroke="#EDE6D6" stroke-width="1.5" fill="none"/>
+      <circle cx="80" cy="42" r="1.5" fill="#1F1B16"/>
+      <rect x="79" y="44" width="2" height="4" fill="#1F1B16"/>
+      <text x="80" y="68" text-anchor="middle" class="sans" font-size="12" fill="#EDE6D6">登录</text>
+      <text x="80" y="80" text-anchor="middle" class="mono" font-size="9" fill="#8B8276">login.html</text>
+    </g>
+
+    <!-- 4. 注册 -->
+    <g transform="translate(504,0)">
+      <rect x="0" y="0" width="160" height="80" rx="6" fill="#2A251E" stroke="#A67C52" stroke-width="1"/>
+      <rect x="8" y="8" width="144" height="3" rx="1" fill="#A67C52" opacity="0.7"/>
+      <circle cx="76" cy="32" r="4" fill="#6B8E7F"/>
+      <path d="M68,50 v-2 a8,8 0 0 1 16,0 v2" fill="#6B8E7F" opacity="0.7"/>
+      <path d="M94,28 v8 M90,32 h8" stroke="#A67C52" stroke-width="1.5" stroke-linecap="round"/>
+      <text x="80" y="68" text-anchor="middle" class="sans" font-size="12" fill="#EDE6D6">注册</text>
+      <text x="80" y="80" text-anchor="middle" class="mono" font-size="9" fill="#8B8276">register.html</text>
+    </g>
+
+    <!-- 5. 在线留言 -->
+    <g transform="translate(672,0)">
+      <rect x="0" y="0" width="160" height="80" rx="6" fill="#2A251E" stroke="#A67C52" stroke-width="1"/>
+      <rect x="8" y="8" width="144" height="3" rx="1" fill="#A67C52" opacity="0.7"/>
+      <rect x="64" y="24" width="32" height="20" rx="4" fill="#6B8E7F" opacity="0.75"/>
+      <path d="M72,44 l-2,6 l8,-6" fill="#6B8E7F" opacity="0.75"/>
+      <circle cx="74" cy="34" r="1.5" fill="#EDE6D6"/>
+      <circle cx="80" cy="34" r="1.5" fill="#EDE6D6"/>
+      <circle cx="86" cy="34" r="1.5" fill="#EDE6D6"/>
+      <text x="80" y="68" text-anchor="middle" class="sans" font-size="12" fill="#EDE6D6">在线留言</text>
+      <text x="80" y="80" text-anchor="middle" class="mono" font-size="9" fill="#8B8276">message.html</text>
+    </g>
+
+    <!-- 6. 关于我们 -->
+    <g transform="translate(840,0)">
+      <rect x="0" y="0" width="160" height="80" rx="6" fill="#2A251E" stroke="#A67C52" stroke-width="1"/>
+      <rect x="8" y="8" width="144" height="3" rx="1" fill="#A67C52" opacity="0.7"/>
+      <circle cx="80" cy="36" r="11" stroke="#A67C52" stroke-width="1.5" fill="none"/>
+      <circle cx="80" cy="31" r="1.5" fill="#EDE6D6"/>
+      <rect x="79" y="35" width="2" height="8" fill="#EDE6D6"/>
+      <text x="80" y="68" text-anchor="middle" class="sans" font-size="12" fill="#EDE6D6">关于我们</text>
+      <text x="80" y="80" text-anchor="middle" class="mono" font-size="9" fill="#8B8276">about.html</text>
+    </g>
+  </g>
+</svg>
