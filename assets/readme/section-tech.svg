@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" width="100%" role="img" aria-label="技术栈">
+  <defs>
+    <linearGradient id="techBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f5f3ee" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#f5f3ee" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#f5f3ee" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="techLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3d7a62"/>
+      <stop offset="100%" stop-color="#254e3f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="120" fill="url(#techBg)"/>
+  <g transform="translate(60, 36)">
+    <rect x="0" y="8" width="4" height="36" rx="2" fill="url(#techLine)"/>
+    <text x="24" y="32" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="26" font-weight="700" fill="#1a342b" letter-spacing="-0.5">技术栈</text>
+    <text x="24" y="58" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="14" font-weight="400" fill="#71717a">现代化前端技术选型，组件化开发与高性能动画引擎</text>
+    <g transform="translate(1060, 10)">
+      <rect x="0" y="10" width="6" height="6" rx="1.5" fill="#254e3f" opacity="0.15"/>
+      <rect x="14" y="7" width="9" height="12" rx="2" fill="#fbbf24" opacity="0.25"/>
+      <rect x="31" y="11" width="6" height="4" rx="1" fill="#254e3f" opacity="0.1"/>
+    </g>
+  </g>
+</svg>

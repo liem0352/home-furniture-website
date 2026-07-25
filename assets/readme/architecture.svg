@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" role="img" aria-label="项目架构图">
+  <defs>
+    <linearGradient id="archBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#faf9f6"/>
+      <stop offset="100%" stop-color="#f0f7f4"/>
+    </linearGradient>
+    <linearGradient id="layer0" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1a342b"/>
+      <stop offset="100%" stop-color="#254e3f"/>
+    </linearGradient>
+    <filter id="layerShadow" x="-2%" y="-20%" width="104%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="15" flood-color="#1a342b" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="360" fill="url(#archBg)"/>
+
+  <!-- 第 1 层：页面层 -->
+  <g transform="translate(60, 40)" filter="url(#layerShadow)">
+    <rect x="0" y="0" width="1080" height="60" rx="12" fill="#ffffff" stroke="#e8e4d9" stroke-width="1"/>
+    <text x="28" y="26" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="13" font-weight="600" fill="#254e3f">页面层 Pages</text>
+    <text x="28" y="46" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#71717a">Home · Products · ProductDetail · Cart · Checkout · Orders · About · Inspiration · RoomSets 等 23 个页面</text>
+  </g>
+
+  <!-- 连接线 -->
+  <g stroke="#d6cfbe" stroke-width="1.5" stroke-dasharray="4 4">
+    <line x1="200" y1="100" x2="200" y2="120"/>
+    <line x1="600" y1="100" x2="600" y2="120"/>
+    <line x1="980" y1="100" x2="980" y2="120"/>
+  </g>
+
+  <!-- 第 2 层：组件层 -->
+  <g transform="translate(60, 120)" filter="url(#layerShadow)">
+    <rect x="0" y="0" width="1080" height="60" rx="12" fill="#ffffff" stroke="#e8e4d9" stroke-width="1"/>
+    <text x="28" y="26" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="13" font-weight="600" fill="#254e3f">组件层 Components</text>
+    <text x="28" y="46" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#71717a">Navbar · Footer · Hero · PageHero · ProductCard · FlashSale · CartDrawer · QuickView · Toast · BackToTop 等 17 个组件</text>
+  </g>
+
+  <!-- 连接线 -->
+  <g stroke="#d6cfbe" stroke-width="1.5" stroke-dasharray="4 4">
+    <line x1="300" y1="180" x2="300" y2="200"/>
+    <line x1="700" y1="180" x2="700" y2="200"/>
+  </g>
+
+  <!-- 第 3 层：状态 & Hooks 层 -->
+  <g transform="translate(60, 200)">
+    <g filter="url(#layerShadow)">
+      <rect x="0" y="0" width="520" height="60" rx="12" fill="#ffffff" stroke="#e8e4d9" stroke-width="1"/>
+      <text x="28" y="26" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="13" font-weight="600" fill="#254e3f">状态层 Store</text>
+      <text x="28" y="46" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#71717a">Context API — 购物车 / 收藏 / 对比列表 / Toast 通知</text>
+    </g>
+    <g transform="translate(560, 0)" filter="url(#layerShadow)">
+      <rect x="0" y="0" width="520" height="60" rx="12" fill="#ffffff" stroke="#e8e4d9" stroke-width="1"/>
+      <text x="28" y="26" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="13" font-weight="600" fill="#254e3f">Hooks 层</text>
+      <text x="28" y="46" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#71717a">useScrollReveal · useScrollPosition · useMediaQuery</text>
+    </g>
+  </g>
+
+  <!-- 连接线 -->
+  <g stroke="#d6cfbe" stroke-width="1.5" stroke-dasharray="4 4">
+    <line x1="320" y1="260" x2="320" y2="280"/>
+    <line x1="840" y1="260" x2="840" y2="280"/>
+  </g>
+
+  <!-- 第 4 层：数据 & 基础层 -->
+  <g transform="translate(60, 280)">
+    <g filter="url(#layerShadow)">
+      <rect x="0" y="0" width="340" height="60" rx="12" fill="#ffffff" stroke="#e8e4d9" stroke-width="1"/>
+      <text x="28" y="26" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="13" font-weight="600" fill="#254e3f">数据层 Data</text>
+      <text x="28" y="46" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#71717a">products · reviews · coupons · nav · home</text>
+    </g>
+    <g transform="translate(370, 0)" filter="url(#layerShadow)">
+      <rect x="0" y="0" width="340" height="60" rx="12" fill="url(#layer0)"/>
+      <text x="28" y="26" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="13" font-weight="600" fill="#ffffff">样式 & 设计令牌</text>
+      <text x="28" y="46" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#8cbaa3">Tailwind CSS · 自定义配色 / 字号 / 圆角 / 动效</text>
+    </g>
+    <g transform="translate(740, 0)" filter="url(#layerShadow)">
+      <rect x="0" y="0" width="340" height="60" rx="12" fill="#ffffff" stroke="#e8e4d9" stroke-width="1"/>
+      <text x="28" y="26" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="13" font-weight="600" fill="#254e3f">路由层 Router</text>
+      <text x="28" y="46" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#71717a">React Router 6 · 动态路由 · 嵌套路由</text>
+    </g>
+  </g>
+</svg>

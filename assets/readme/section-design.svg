@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" width="100%" role="img" aria-label="设计系统">
+  <defs>
+    <linearGradient id="dsBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f0f7f4" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#f0f7f4" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#f0f7f4" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="120" fill="url(#dsBg)"/>
+  <g transform="translate(60, 36)">
+    <rect x="0" y="8" width="4" height="36" rx="2" fill="#254e3f"/>
+    <text x="24" y="32" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="26" font-weight="700" fill="#1a342b" letter-spacing="-0.5">设计系统</text>
+    <text x="24" y="58" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="14" font-weight="400" fill="#71717a">森林深绿 + 骨白 + 琥珀金，统一设计令牌与动效规范</text>
+    <g transform="translate(1060, 8)">
+      <circle cx="0" cy="16" r="10" fill="#254e3f" opacity="0.2"/>
+      <circle cx="24" cy="16" r="10" fill="#faf9f6" stroke="#e8e4d9" stroke-width="1.5"/>
+      <circle cx="48" cy="16" r="10" fill="#fbbf24" opacity="0.6"/>
+    </g>
+  </g>
+</svg>
