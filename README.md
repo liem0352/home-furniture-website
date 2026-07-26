@@ -75,6 +75,159 @@
 
 <br>
 
+### 项目截图
+
+> 以下截图均取自实际运行的开发服务器（1440×900 视口，完整页面长截图）。
+
+#### 首页
+
+<img src="assets/readme/screenshots/home.jpg" alt="首页 - Hero 横幅、限时秒杀、产品推荐、数据统计、用户评价、品牌故事" width="100%"/>
+
+<sub>首页 `/` — 全屏 Hero 横幅、限时秒杀倒计时、产品分类导航、精选产品推荐、数据统计滚动动画、用户评价墙、品牌故事区块</sub>
+
+<br>
+
+#### 核心购物流程
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="assets/readme/screenshots/products.jpg" alt="产品中心" width="100%"/>
+      <sub><b>产品中心</b> <code>/products</code> — 产品网格列表、分类筛选侧栏、排序、快速预览</sub>
+    </td>
+    <td width="50%" valign="top">
+      <img src="assets/readme/screenshots/product-detail.jpg" alt="产品详情" width="100%"/>
+      <sub><b>产品详情</b> <code>/product/:id</code> — 商品大图、规格选择、加购收藏、面包屑导航</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="assets/readme/screenshots/cart.jpg" alt="购物车" width="100%"/>
+      <sub><b>购物车</b> <code>/cart</code> — 商品数量调整、金额汇总、空状态处理</sub>
+    </td>
+    <td width="50%" valign="top">
+      <img src="assets/readme/screenshots/checkout.jpg" alt="结算" width="100%"/>
+      <sub><b>结算</b> <code>/checkout</code> — 收货地址、支付方式选择、订单确认</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="assets/readme/screenshots/orders.jpg" alt="订单管理" width="100%"/>
+      <sub><b>订单管理</b> <code>/orders</code> — 订单列表、状态筛选、订单详情入口</sub>
+    </td>
+    <td width="50%" valign="top">
+      <img src="assets/readme/screenshots/compare.jpg" alt="商品对比" width="100%"/>
+      <sub><b>商品对比</b> <code>/compare</code> — 多商品参数横向对比表格</sub>
+    </td>
+  </tr>
+</table>
+
+<br>
+
+#### 内容运营模块
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="assets/readme/screenshots/story.jpg" alt="品牌故事" width="100%"/>
+      <sub><b>品牌故事</b> <code>/story</code> — 品牌历史、设计理念、工艺传承</sub>
+    </td>
+    <td width="50%" valign="top">
+      <img src="assets/readme/screenshots/inspiration.jpg" alt="灵感中心" width="100%"/>
+      <sub><b>灵感中心</b> <code>/inspiration</code> — 家居灵感图册、搭配建议</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="assets/readme/screenshots/room-sets.jpg" alt="房间搭配" width="100%"/>
+      <sub><b>房间搭配</b> <code>/room-sets</code> — 场景化整屋搭配方案</sub>
+    </td>
+    <td width="50%" valign="top">
+      <img src="assets/readme/screenshots/coupons.jpg" alt="优惠券中心" width="100%"/>
+      <sub><b>优惠券中心</b> <code>/coupons</code> — 优惠券领取与管理</sub>
+    </td>
+  </tr>
+</table>
+
+<br>
+
+#### 用户中心与搜索
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="assets/readme/screenshots/account.jpg" alt="账户中心" width="100%"/>
+      <sub><b>账户中心</b> <code>/account</code> — 个人信息管理</sub>
+    </td>
+    <td width="50%" valign="top">
+      <img src="assets/readme/screenshots/wishlist.jpg" alt="收藏夹" width="100%"/>
+      <sub><b>收藏夹</b> <code>/wishlist</code> — 收藏商品管理</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="assets/readme/screenshots/search.jpg" alt="搜索" width="100%"/>
+      <sub><b>搜索</b> <code>/search</code> — 关键词搜索与结果展示</sub>
+    </td>
+    <td width="50%" valign="top">
+      <img src="assets/readme/screenshots/login.jpg" alt="登录" width="100%"/>
+      <sub><b>登录</b> <code>/login</code> — 用户认证页面</sub>
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<details>
+<summary><b>服务与支持页面（点击展开）</b></summary>
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="assets/readme/screenshots/about.jpg" alt="关于我们" width="100%"/>
+      <sub><b>关于我们</b> <code>/about</code></sub>
+    </td>
+    <td width="50%" valign="top">
+      <img src="assets/readme/screenshots/contact.jpg" alt="联系我们" width="100%"/>
+      <sub><b>联系我们</b> <code>/contact</code></sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="assets/readme/screenshots/message.jpg" alt="在线留言" width="100%"/>
+      <sub><b>在线留言</b> <code>/message</code></sub>
+    </td>
+    <td width="50%" valign="top">
+      <img src="assets/readme/screenshots/service.jpg" alt="客服中心" width="100%"/>
+      <sub><b>客服中心</b> <code>/service</code></sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="assets/readme/screenshots/faq.jpg" alt="常见问题" width="100%"/>
+      <sub><b>常见问题</b> <code>/faq</code></sub>
+    </td>
+    <td width="50%" valign="top">
+      <img src="assets/readme/screenshots/register.jpg" alt="注册" width="100%"/>
+      <sub><b>注册</b> <code>/register</code></sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="assets/readme/screenshots/privacy.jpg" alt="隐私政策" width="100%"/>
+      <sub><b>隐私政策</b> <code>/privacy</code></sub>
+    </td>
+    <td width="50%" valign="top">
+      <img src="assets/readme/screenshots/terms.jpg" alt="服务条款" width="100%"/>
+      <sub><b>服务条款</b> <code>/terms</code></sub>
+    </td>
+  </tr>
+</table>
+
+</details>
+
+<br>
+
 <p align="center">
   <img src="assets/readme/architecture.svg" alt="项目架构图" width="100%"/>
 </p>
