@@ -43,6 +43,6 @@ export const footerLinks = {
 export const contactInfo = {
   phone: '400-888-9999',
   email: 'service@jingmei.com',
-  address: '上海市松江区家具产业园区精美路 88 号',
+  address: '广东省广州市番禺区家具创意产业园精美路 88 号',
   workHours: '周一至周日 9:00-21:00',
 }
