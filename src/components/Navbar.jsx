@@ -395,7 +395,7 @@ export default function Navbar() {
 
       {/* 移动端菜单 - 独立全屏毛玻璃覆盖层 */}
       <div
-        className={`md:hidden fixed inset-0 z-[60] transition-opacity duration-500 ${
+        className={`md:hidden fixed inset-x-0 top-16 bottom-0 z-[60] transition-opacity duration-500 ${
           isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       >
@@ -405,7 +405,7 @@ export default function Navbar() {
             isMenuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
-          <div className="pt-20 px-6 pb-6 h-full overflow-y-auto">
+          <div className="pt-4 px-6 pb-6 h-full overflow-y-auto">
             <nav className="flex flex-col gap-1">
               {navLinks.map((link, index) => (
                 <NavLink
