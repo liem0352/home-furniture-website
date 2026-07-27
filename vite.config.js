@@ -7,6 +7,7 @@ import path from 'path'
  * 配置 React 插件、路径别名和开发服务器
  */
 export default defineConfig({
+  base: '/home-furniture-website/',
   plugins: [react()],
   resolve: {
     alias: {
