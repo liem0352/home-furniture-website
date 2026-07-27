@@ -35,7 +35,7 @@ export default function Navbar() {
   const navigate = useNavigate()
   const isScrolled = scrollY > 50
   const isHomePage = location.pathname === '/'
-  const shouldUseDarkNavbar = isScrolled
+  const shouldUseDarkNavbar = isScrolled || isMenuOpen
   const { cartCount } = useCart()
   const { wishlistCount } = useWishlist()
   const { compareCount } = useCompare()
@@ -393,7 +393,7 @@ export default function Navbar() {
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <div className="p-6 flex flex-col gap-1">
+        <div className="p-6 flex flex-col gap-1 overflow-y-auto h-full">
           {navLinks.map((link, index) => (
             <NavLink
               key={link.path}
