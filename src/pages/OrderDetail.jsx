@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Link, useParams, useNavigate } from 'react-router-dom'
 import {
   ArrowLeft,
@@ -20,6 +21,13 @@ import BackToTop from '../components/BackToTop.jsx'
  * 展示订单的详细信息，包括商品、收货地址、金额等
  */
 export default function OrderDetail() {
+  /**
+   * 设置页面标题，提升SEO和用户体验
+   */
+  useEffect(() => {
+    document.title = '订单详情 | 精美家居'
+  }, [])
+
   const { id } = useParams()
   const navigate = useNavigate()
   const { getOrderById, cancelOrder } = useOrders()

@@ -18,6 +18,13 @@ import { products, productCategories } from '../data/products.js'
  * 展示搜索结果，支持分类筛选和排序
  */
 export default function Search() {
+  /**
+   * 设置页面标题，提升SEO和用户体验
+   */
+  useEffect(() => {
+    document.title = '搜索结果 | 精美家居'
+  }, [])
+
   const [searchParams, setSearchParams] = useSearchParams()
   const query = searchParams.get('q') || ''
 

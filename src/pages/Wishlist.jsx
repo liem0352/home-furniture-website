@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import {
   Heart,
@@ -15,6 +16,13 @@ import BackToTop from '../components/BackToTop.jsx'
  * 展示用户收藏的商品列表，支持移除和加入购物车
  */
 export default function Wishlist() {
+  /**
+   * 设置页面标题，提升SEO和用户体验
+   */
+  useEffect(() => {
+    document.title = '我的收藏 | 精美家居'
+  }, [])
+
   const { wishlist, removeFromWishlist, wishlistCount } = useWishlist()
   const { addToCart } = useCart()
   const titleRef = useScrollReveal({ y: 30, duration: 0.6 })

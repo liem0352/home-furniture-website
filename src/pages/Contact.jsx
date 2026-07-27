@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {
   Phone,
   Envelope,
@@ -21,6 +21,13 @@ import { useToast } from '../store/AppContext.jsx'
  * 展示联系方式、门店分布、在线留言等功能
  */
 export default function Contact() {
+  /**
+   * 设置页面标题，提升SEO和用户体验
+   */
+  useEffect(() => {
+    document.title = '联系我们 | 精美家居'
+  }, [])
+
   const titleRef = useScrollReveal({ y: 30, duration: 0.8 })
   const contentRef = useScrollReveal({ y: 40, duration: 0.8, delay: 0.2 })
   const formRef = useScrollReveal({ y: 40, duration: 0.8, delay: 0.3 })
@@ -309,7 +316,7 @@ export default function Contact() {
                     <MapPin size={20} className="text-forest-600 flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="font-medium text-zinc-900">公司地址</p>
-                      <p className="text-zinc-600">上海市松江区家具产业园区精美路 88 号</p>
+                      <p className="text-zinc-600">广东省广州市番禺区家具创意产业园精美路 88 号</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">

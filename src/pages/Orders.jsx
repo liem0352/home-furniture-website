@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import {
   Package,
@@ -18,6 +18,13 @@ import { useNavigate } from 'react-router-dom'
  * 展示用户的所有订单，支持按状态筛选
  */
 export default function Orders() {
+  /**
+   * 设置页面标题，提升SEO和用户体验
+   */
+  useEffect(() => {
+    document.title = '我的订单 | 精美家居'
+  }, [])
+
   const { orders, cancelOrder } = useOrders()
   const { isLoggedIn } = useAuth()
   const navigate = useNavigate()

@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { FileText, CheckCircle, ShieldCheck, User, ShoppingCart, Target, Scroll } from '@phosphor-icons/react'
 import BackToTop from '../components/BackToTop.jsx'
 import PageHero from '../components/PageHero.jsx'
@@ -8,6 +9,13 @@ import { useScrollReveal } from '../hooks/useScrollReveal.js'
  * 展示网站的用户服务协议和使用条款
  */
 export default function Terms() {
+  /**
+   * 设置页面标题，提升SEO和用户体验
+   */
+  useEffect(() => {
+    document.title = '服务条款 | 精美家居'
+  }, [])
+
   const titleRef = useScrollReveal({ y: 30, duration: 0.8 })
   const contentRef = useScrollReveal({ y: 40, duration: 0.8, delay: 0.2 })
 

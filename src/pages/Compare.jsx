@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import {
   X,
@@ -22,6 +22,13 @@ import { useScrollReveal, useStaggerReveal } from '../hooks/useScrollReveal'
  * 对比多个产品的参数、价格、功能等
  */
 export default function Compare() {
+  /**
+   * 设置页面标题，提升SEO和用户体验
+   */
+  useEffect(() => {
+    document.title = '商品对比 | 精美家居'
+  }, [])
+
   const { compare, removeFromCompare, clearCompare } = useCompare()
   const { addToCart } = useCart()
   const { toggleWishlist, isInWishlist } = useWishlist()

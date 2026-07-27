@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import Hero from '../components/Hero.jsx'
 import Features from '../components/Features.jsx'
 import ProductShowcase from '../components/ProductShowcase.jsx'
@@ -15,6 +16,13 @@ import { hotProducts, newProducts } from '../data/products.js'
  * 组合所有首页区块，构成完整的落地页
  */
 export default function Home() {
+  /**
+   * 设置页面标题，提升SEO和用户体验
+   */
+  useEffect(() => {
+    document.title = '首页 | 精美家居'
+  }, [])
+
   return (
     <div className="bg-bone-50">
       <Hero />

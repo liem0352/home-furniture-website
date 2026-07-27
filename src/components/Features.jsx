@@ -46,14 +46,14 @@ export default function Features({ features }) {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-forest-900/60 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-amber-500 text-white mb-4">
+                <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-amber-500 text-white mb-3 sm:mb-4">
                   {(() => {
                     const Icon = iconMap[features[0].icon] || Leaf
-                    return <Icon size={28} weight="duotone" />
+                    return <Icon size={24} weight="duotone" className="sm:w-7 sm:h-7" />
                   })()}
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2">{features[0].title}</h3>
-                <p className="text-zinc-200 text-sm">{features[0].description}</p>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 break-words line-clamp-2">{features[0].title}</h3>
+                <p className="text-zinc-200 text-xs sm:text-sm break-words line-clamp-3">{features[0].description}</p>
               </div>
             </div>
           </div>
@@ -71,10 +71,10 @@ export default function Features({ features }) {
                     <div className="w-12 h-12 rounded-xl bg-forest-50 text-forest-700 flex items-center justify-center mb-4 group-hover:bg-forest-600 group-hover:text-white transition-all duration-300">
                       <Icon size={24} weight="duotone" />
                     </div>
-                    <h3 className="text-lg font-semibold text-zinc-900 mb-2 group-hover:text-forest-700 transition-colors">
+                    <h3 className="text-lg font-semibold text-zinc-900 mb-2 group-hover:text-forest-700 transition-colors break-words line-clamp-2">
                       {feature.title}
                     </h3>
-                    <p className="text-sm text-zinc-600 leading-relaxed">
+                    <p className="text-sm text-zinc-600 leading-relaxed break-words line-clamp-3">
                       {feature.description}
                     </p>
                   </div>
@@ -82,12 +82,12 @@ export default function Features({ features }) {
               })}
 
               {/* 额外的统计卡片 */}
-              <div className="p-6 bg-forest-700 text-white rounded-card">
-                <div className="text-4xl font-bold mb-2">15<span className="text-amber-400">+</span></div>
-                <div className="text-sm text-forest-200">年行业深耕经验</div>
+              <div className="p-6 bg-forest-700 text-white rounded-card overflow-hidden">
+                <div className="text-3xl sm:text-4xl font-bold mb-2 break-words">15<span className="text-amber-400">+</span></div>
+                <div className="text-xs sm:text-sm text-forest-200 break-words">年行业深耕经验</div>
                 <div className="mt-4 pt-4 border-t border-forest-600">
-                  <div className="text-2xl font-bold">50000<span className="text-amber-400">+</span></div>
-                  <div className="text-sm text-forest-200">幸福家庭的选择</div>
+                  <div className="text-xl sm:text-2xl font-bold break-words">50000<span className="text-amber-400">+</span></div>
+                  <div className="text-xs sm:text-sm text-forest-200 break-words">幸福家庭的选择</div>
                 </div>
               </div>
             </div>

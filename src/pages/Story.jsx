@@ -18,6 +18,13 @@ gsap.registerPlugin(ScrollTrigger)
  * 展示品牌历史、设计理念、核心价值等
  */
 export default function Story() {
+  /**
+   * 设置页面标题，提升SEO和用户体验
+   */
+  useEffect(() => {
+    document.title = '品牌故事 | 精美家居'
+  }, [])
+
   const pageRef = useRef(null)
   const heroRef = useRef(null)
   const valuesRef = useRef(null)

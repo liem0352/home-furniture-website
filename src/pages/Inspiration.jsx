@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import {
   ArrowLeft,
@@ -16,6 +16,13 @@ import { useStaggerReveal } from '../hooks/useScrollReveal'
  * 展示家居搭配灵感、装修案例等
  */
 export default function Inspiration() {
+  /**
+   * 设置页面标题，提升SEO和用户体验
+   */
+  useEffect(() => {
+    document.title = '灵感图集 | 精美家居'
+  }, [])
+
   const [activeCategory, setActiveCategory] = useState('all')
   const gridRef = useStaggerReveal({ y: 40, stagger: 0.12, duration: 0.7 })
 

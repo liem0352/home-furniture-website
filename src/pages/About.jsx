@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import {
   Leaf,
   ShieldCheck,
@@ -23,6 +24,13 @@ import { contactInfo } from '../data/nav.js'
  * 展示公司简介、发展历程、企业理念、团队和联系方式
  */
 export default function About() {
+  /**
+   * 设置页面标题，提升SEO和用户体验
+   */
+  useEffect(() => {
+    document.title = '关于我们 | 精美家居'
+  }, [])
+
   const titleRef = useScrollReveal({ y: 30, duration: 0.8 })
   const storyRef = useScrollReveal({ y: 40, duration: 0.8 })
   const valuesRef = useScrollReveal({ y: 40, duration: 0.8 })

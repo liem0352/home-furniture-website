@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {
   CaretDown,
   Question,
@@ -20,6 +20,13 @@ import { useScrollReveal } from '../hooks/useScrollReveal.js'
  * 展示用户常见问题及解答，采用手风琴折叠形式
  */
 export default function FAQ() {
+  /**
+   * 设置页面标题，提升SEO和用户体验
+   */
+  useEffect(() => {
+    document.title = '常见问题 | 精美家居'
+  }, [])
+
   const titleRef = useScrollReveal({ y: 30, duration: 0.8 })
   const contentRef = useScrollReveal({ y: 40, duration: 0.8, delay: 0.2 })
   const [openIndex, setOpenIndex] = useState(0)

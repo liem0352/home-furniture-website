@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Shield, FileText, Lock, User, Eye, Cookie, Envelope, LockKey } from '@phosphor-icons/react'
 import BackToTop from '../components/BackToTop.jsx'
 import PageHero from '../components/PageHero.jsx'
@@ -8,6 +9,13 @@ import { useScrollReveal } from '../hooks/useScrollReveal.js'
  * 展示网站的隐私保护政策和用户数据使用说明
  */
 export default function Privacy() {
+  /**
+   * 设置页面标题，提升SEO和用户体验
+   */
+  useEffect(() => {
+    document.title = '隐私政策 | 精美家居'
+  }, [])
+
   const titleRef = useScrollReveal({ y: 30, duration: 0.8 })
   const contentRef = useScrollReveal({ y: 40, duration: 0.8, delay: 0.2 })
 

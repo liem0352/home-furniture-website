@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import {
   ArrowLeft,
@@ -21,6 +21,13 @@ import BackToTop from '../components/BackToTop.jsx'
  * 填写收货地址、选择支付方式、确认订单并提交
  */
 export default function Checkout() {
+  /**
+   * 设置页面标题，提升SEO和用户体验
+   */
+  useEffect(() => {
+    document.title = '结算 | 精美家居'
+  }, [])
+
   const { cart, cartTotal, cartCount, clearCart } = useCart()
   const { placeOrder } = useOrders()
   const { user, isLoggedIn } = useAuth()

@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { MagnifyingGlass, SlidersHorizontal, SquaresFour, List, ArrowsVertical, X, Package } from '@phosphor-icons/react'
 import ProductCard from '../components/ProductCard.jsx'
 import BackToTop from '../components/BackToTop.jsx'
@@ -11,6 +11,13 @@ import { useScrollReveal } from '../hooks/useScrollReveal.js'
  * 展示所有产品，支持分类筛选、高级筛选和排序
  */
 export default function Products() {
+  /**
+   * 设置页面标题，提升SEO和用户体验
+   */
+  useEffect(() => {
+    document.title = '产品中心 | 精美家居'
+  }, [])
+
   const [activeCategory, setActiveCategory] = useState('all')
   const [sortBy, setSortBy] = useState('default')
   const [viewMode, setViewMode] = useState('grid')

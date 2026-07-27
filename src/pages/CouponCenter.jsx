@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import {
   ArrowLeft,
@@ -16,6 +16,13 @@ import { useScrollReveal, useStaggerReveal } from '../hooks/useScrollReveal'
  * 展示可领取优惠券和用户已领取的优惠券
  */
 export default function CouponCenter() {
+  /**
+   * 设置页面标题，提升SEO和用户体验
+   */
+  useEffect(() => {
+    document.title = '优惠券中心 | 精美家居'
+  }, [])
+
   const { addCoupon, coupons, availableCoupons: myAvailableCoupons, usedCoupons, expiredCoupons } = useCoupons()
   const { isLoggedIn } = useAuth()
   const [activeTab, setActiveTab] = useState('available')

@@ -25,6 +25,13 @@ import BackToTop from '../components/BackToTop.jsx'
  * 展示产品详细信息、规格选择、数量调整、加入购物车等功能
  */
 export default function ProductDetail() {
+  /**
+   * 设置页面标题，提升SEO和用户体验
+   */
+  useEffect(() => {
+    document.title = '产品详情 | 精美家居'
+  }, [])
+
   const { id } = useParams()
   const navigate = useNavigate()
   const product = getProductById(id)

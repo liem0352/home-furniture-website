@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import {
   Envelope,
@@ -14,8 +14,21 @@ import { useAuth } from '../store/AppContext.jsx'
 /**
  * 登录页面
  * 用户登录表单，支持邮箱/手机号登录
+ *
+ * 移动端触摸优化说明：
+ * - 所有可点击元素（链接、按钮、复选框）的触摸区域均不小于 44x44px
+ * - 符合 WCAG 2.1 触摸目标尺寸标准，提升移动端用户体验
+ * - 通过增加内边距（padding）和最小高度（min-h-[44px]）实现
+ * - 使用负外边距（-ml-2, -mr-1）抵消内边距，保持视觉对齐
  */
 export default function Login() {
+  /**
+   * 设置页面标题，提升SEO和用户体验
+   */
+  useEffect(() => {
+    document.title = '登录 | 精美家居'
+  }, [])
+
   const [showPassword, setShowPassword] = useState(false)
   const [formData, setFormData] = useState({
     email: '',
@@ -131,7 +144,7 @@ export default function Login() {
           {/* 移动端返回按钮 */}
           <Link
             to="/"
-            className="lg:hidden inline-flex items-center gap-2 text-zinc-600 hover:text-forest-700 mb-8 transition-colors"
+            className="lg:hidden inline-flex items-center gap-2 text-zinc-600 hover:text-forest-700 mb-8 transition-colors py-2 -ml-2 px-2 min-h-[44px]"
           >
             <ArrowLeft size={18} />
             <span>返回首页</span>
@@ -144,7 +157,7 @@ export default function Login() {
             <h2 className="text-2xl font-bold text-zinc-900 mb-2">登录账号</h2>
             <p className="text-zinc-500 text-sm">
               还没有账号？
-              <Link to="/register" className="text-forest-700 font-medium hover:underline ml-1">
+              <Link to="/register" className="text-forest-700 font-medium hover:underline ml-1 py-2 px-1 inline-block min-h-[44px] align-middle">
                 立即注册
               </Link>
             </p>
@@ -194,7 +207,8 @@ export default function Login() {
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-600 transition-colors"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-600 transition-colors w-11 h-11 flex items-center justify-center"
+                  aria-label={showPassword ? '隐藏密码' : '显示密码'}
                 >
                   {showPassword ? <EyeSlash size={18} /> : <Eye size={18} />}
                 </button>
@@ -206,7 +220,7 @@ export default function Login() {
 
             {/* 记住我 / 忘记密码 */}
             <div className="flex items-center justify-between">
-              <label className="flex items-center gap-2 cursor-pointer">
+              <label className="flex items-center gap-2 cursor-pointer py-2 -ml-2 pl-2 min-h-[44px]">
                 <input
                   type="checkbox"
                   name="remember"
@@ -218,7 +232,7 @@ export default function Login() {
               </label>
               <Link
                 to="#"
-                className="text-sm text-forest-700 font-medium hover:underline"
+                className="text-sm text-forest-700 font-medium hover:underline py-2 px-1 -mr-1 min-h-[44px]"
               >
                 忘记密码？
               </Link>

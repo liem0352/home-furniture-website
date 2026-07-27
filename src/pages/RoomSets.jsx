@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import {
   Leaf as SofaIcon,
@@ -12,7 +12,7 @@ import {
 } from '@phosphor-icons/react'
 import { useCart } from '../store/AppContext.jsx'
 import { getProductsByIds } from '../data/products.js'
-import { useScrollReveal } from '../hooks/useScrollReveal.js'
+import { useScrollReveal, useStaggerReveal } from '../hooks/useScrollReveal.js'
 import BackToTop from '../components/BackToTop.jsx'
 import CTASection from '../components/CTASection.jsx'
 import PageHero from '../components/PageHero.jsx'
@@ -121,13 +121,28 @@ const categories = [
 /**
  * 全屋搭配方案页面
  * 展示不同风格的整套家具搭配方案
+ *
+ * 修复说明：
+ * 1. 修复了 useScrollReveal 误用问题：setsRef 原本错误地使用了 stagger 参数，
+ *    但 useScrollReveal 不支持 stagger，应使用 useStaggerReveal
+ * 2. 修复了 ref 位置错误：setsRef 原本被用在标题筛选栏上，
+ *    实际应该用在方案网格上实现卡片交错动画
+ * 3. 标题筛选栏现在正确使用 titleRef（useScrollReveal）
+ * 4. 各区块间距保持合理设计：方案特色 py-10，搭配方案 py-12/md:py-16
  */
 export default function RoomSets() {
+  /**
+   * 设置页面标题，提升SEO和用户体验
+   */
+  useEffect(() => {
+    document.title = '全屋搭配 | 精美家居'
+  }, [])
+
   const { addToCart } = useCart()
   const [activeCategory, setActiveCategory] = useState('all')
   const pageRef = useRef(null)
   const titleRef = useScrollReveal({ y: 30, duration: 0.8 })
-  const setsRef = useScrollReveal({ y: 40, duration: 0.8, stagger: 0.08 })
+  const setsRef = useStaggerReveal({ y: 40, duration: 0.8, stagger: 0.08 })
 
   const filteredSets = activeCategory === 'all'
     ? roomSets
@@ -191,7 +206,7 @@ export default function RoomSets() {
 
       <div className="max-w-7xl mx-auto px-6 py-12 md:py-16">
         {/* 标题和筛选 */}
-        <div ref={setsRef} className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
+        <div ref={titleRef} className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
           <div>
             <div className="inline-flex items-center gap-2 mb-3">
               <span className="w-8 h-px bg-amber-500" />
@@ -228,7 +243,7 @@ export default function RoomSets() {
 
         {/* 搭配方案网格 */}
         {filteredSets.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div ref={setsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredSets.map((set, index) => (
               <div
                 key={set.id}

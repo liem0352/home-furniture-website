@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import {
   Envelope,
@@ -14,8 +14,21 @@ import {
 /**
  * 注册页面
  * 用户注册表单，支持用户名、邮箱、密码等信息
+ *
+ * 移动端触摸优化说明：
+ * - 所有可点击元素（链接、按钮、复选框）的触摸区域均不小于 44x44px
+ * - 符合 WCAG 2.1 触摸目标尺寸标准，提升移动端用户体验
+ * - 通过增加内边距（padding）和最小高度（min-h-[44px]）实现
+ * - 使用负外边距（-ml-2, -mr-1）抵消内边距，保持视觉对齐
  */
 export default function Register() {
+  /**
+   * 设置页面标题，提升SEO和用户体验
+   */
+  useEffect(() => {
+    document.title = '注册 | 精美家居'
+  }, [])
+
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
   const [formData, setFormData] = useState({
@@ -103,7 +116,7 @@ export default function Register() {
           {/* 移动端返回按钮 */}
           <Link
             to="/"
-            className="lg:hidden inline-flex items-center gap-2 text-zinc-600 hover:text-forest-700 mb-8 transition-colors"
+            className="lg:hidden inline-flex items-center gap-2 text-zinc-600 hover:text-forest-700 mb-8 transition-colors py-2 -ml-2 px-2 min-h-[44px]"
           >
             <ArrowLeft size={18} />
             <span>返回首页</span>
@@ -116,7 +129,7 @@ export default function Register() {
             <h2 className="text-2xl font-bold text-zinc-900 mb-2">创建账号</h2>
             <p className="text-zinc-500 text-sm">
               已有账号？
-              <Link to="/login" className="text-forest-700 font-medium hover:underline ml-1">
+              <Link to="/login" className="text-forest-700 font-medium hover:underline ml-1 py-2 px-1 inline-block min-h-[44px] align-middle">
                 立即登录
               </Link>
             </p>
@@ -212,7 +225,8 @@ export default function Register() {
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-600 transition-colors"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-600 transition-colors w-11 h-11 flex items-center justify-center"
+                  aria-label={showPassword ? '隐藏密码' : '显示密码'}
                 >
                   {showPassword ? <EyeSlash size={18} /> : <Eye size={18} />}
                 </button>
@@ -242,7 +256,8 @@ export default function Register() {
                 <button
                   type="button"
                   onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-600 transition-colors"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-600 transition-colors w-11 h-11 flex items-center justify-center"
+                  aria-label={showConfirmPassword ? '隐藏确认密码' : '显示确认密码'}
                 >
                   {showConfirmPassword ? <EyeSlash size={18} /> : <Eye size={18} />}
                 </button>
@@ -254,7 +269,7 @@ export default function Register() {
 
             {/* 协议同意 */}
             <div className="pt-2">
-              <label className="flex items-start gap-2 cursor-pointer">
+              <label className="flex items-start gap-2 cursor-pointer py-2 -ml-2 pl-2 min-h-[44px]">
                 <input
                   type="checkbox"
                   name="agree"
@@ -262,11 +277,11 @@ export default function Register() {
                   onChange={handleChange}
                   className="mt-0.5 w-4 h-4 rounded border-zinc-300 text-forest-600 focus:ring-forest-500"
                 />
-                <span className="text-sm text-zinc-600">
+                <span className="text-sm text-zinc-600 leading-relaxed">
                   我已阅读并同意
-                  <a href="#" className="text-forest-700 hover:underline mx-0.5">《用户协议》</a>
+                  <a href="#" className="text-forest-700 hover:underline mx-0.5 py-1 px-0.5 inline-block">《用户协议》</a>
                   和
-                  <a href="#" className="text-forest-700 hover:underline mx-0.5">《隐私政策》</a>
+                  <a href="#" className="text-forest-700 hover:underline mx-0.5 py-1 px-0.5 inline-block">《隐私政策》</a>
                 </span>
               </label>
               {errors.agree && (

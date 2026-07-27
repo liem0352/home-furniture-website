@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import {
   ShoppingCart,
@@ -19,6 +20,13 @@ import BackToTop from '../components/BackToTop.jsx'
  * 展示购物车商品列表，支持数量调整、删除、结算等功能
  */
 export default function Cart() {
+  /**
+   * 设置页面标题，提升SEO和用户体验
+   */
+  useEffect(() => {
+    document.title = '购物车 | 精美家居'
+  }, [])
+
   const { cart, updateQuantity, removeFromCart, clearCart, cartTotal, cartCount } = useCart()
   const navigate = useNavigate()
   const titleRef = useScrollReveal({ y: 30, duration: 0.6 })

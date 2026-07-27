@@ -95,21 +95,21 @@ export default function StatsSection() {
             return (
               <div
                 key={index}
-                className="text-center group relative"
+                className="text-center group relative min-w-0"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
                 {/* 图标 */}
-                <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/20 transition-colors duration-300">
-                  <Icon size={24} className="text-amber-400" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/20 transition-colors duration-300">
+                  <Icon size={20} className="text-amber-400 sm:w-6 sm:h-6" />
                 </div>
 
                 {/* 数字 */}
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2 tracking-tight">
+                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 tracking-tight break-words overflow-hidden">
                   <AnimatedNumber end={stat.value} suffix={stat.suffix || ''} />
                 </div>
 
                 {/* 标签 */}
-                <div className="text-forest-200 text-sm font-medium tracking-wide">
+                <div className="text-forest-200 text-xs sm:text-sm font-medium tracking-wide break-words line-clamp-2">
                   {stat.label}
                 </div>
 

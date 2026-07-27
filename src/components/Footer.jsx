@@ -203,7 +203,7 @@ export default function Footer() {
       <div className="border-t border-forest-800">
         <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-zinc-500">
           <div>
-            Copyright © {currentYear} 精美家居. All rights reserved.
+            Copyright © {currentYear} 精美家居 · liem. All rights reserved.
           </div>
           <div className="flex items-center gap-4">
             <Link to="/privacy" className="hover:text-zinc-300 transition-colors">隐私政策</Link>

@@ -42,33 +42,33 @@ export default function BrandStory() {
               </span>
             </div>
 
-            <h2 className="text-heading-2 font-bold text-zinc-900 mb-6 text-balance">
+            <h2 className="text-heading-2 font-bold text-zinc-900 mb-6 text-balance break-words">
               匠心品质
               <br />
               打造温馨家居
             </h2>
 
-            <p className="text-zinc-600 leading-relaxed mb-6">
+            <p className="text-zinc-600 leading-relaxed mb-6 break-words text-pretty">
               精美家居成立于 2009 年，十五年来专注于高品质家居产品的设计与制造。
               我们坚信，好的家具不仅是实用的生活用品，更是生活品质的象征。
             </p>
 
-            <p className="text-zinc-600 leading-relaxed mb-8">
+            <p className="text-zinc-600 leading-relaxed mb-8 break-words text-pretty">
               从原材料甄选到工艺制作，每一个环节我们都精益求精。
               我们与全球优质供应商合作，采用环保材料，为您和家人打造健康舒适的居家环境。
             </p>
 
             {/* 特色列表 */}
-            <div className="grid grid-cols-2 gap-4 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-8">
               {[
                 '环保材料认证',
                 '五年品质质保',
                 '专业设计团队',
                 '全国配送安装',
               ].map((item, index) => (
-                <div key={index} className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-forest-600" />
-                  <span className="text-sm text-zinc-700">{item}</span>
+                <div key={index} className="flex items-center gap-2 min-w-0">
+                  <div className="w-1.5 h-1.5 rounded-full bg-forest-600 flex-shrink-0" />
+                  <span className="text-sm text-zinc-700 break-words truncate">{item}</span>
                 </div>
               ))}
             </div>

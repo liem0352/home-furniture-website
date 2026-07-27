@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {
   User,
   Envelope,
@@ -21,6 +21,13 @@ import { contactInfo } from '../data/nav.js'
  * 用户可以提交留言，并查看常见问题
  */
 export default function Message() {
+  /**
+   * 设置页面标题，提升SEO和用户体验
+   */
+  useEffect(() => {
+    document.title = '在线留言 | 精美家居'
+  }, [])
+
   const [formData, setFormData] = useState({
     name: '',
     phone: '',

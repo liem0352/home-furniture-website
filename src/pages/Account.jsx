@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import {
   User,
@@ -28,6 +28,13 @@ import BackToTop from '../components/BackToTop.jsx'
  * 展示用户信息、订单统计、收藏等个人中心内容
  */
 export default function Account() {
+  /**
+   * 设置页面标题，提升SEO和用户体验
+   */
+  useEffect(() => {
+    document.title = '个人中心 | 精美家居'
+  }, [])
+
   const { user, isLoggedIn, logout } = useAuth()
   const { orders, orderCount } = useOrders()
   const { wishlistCount } = useWishlist()
