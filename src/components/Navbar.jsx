@@ -35,7 +35,8 @@ export default function Navbar() {
   const navigate = useNavigate()
   const isScrolled = scrollY > 50
   const isHomePage = location.pathname === '/'
-  const shouldUseDarkNavbar = isScrolled || isMenuOpen
+  const shouldUseDarkNavbar = isScrolled
+  const isMenuBgVisible = isScrolled || isMenuOpen
   const { cartCount } = useCart()
   const { wishlistCount } = useWishlist()
   const { compareCount } = useCompare()
@@ -91,9 +92,11 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-expo ${
-        shouldUseDarkNavbar
-          ? 'bg-bone-50/90 backdrop-blur-lg shadow-soft border-b border-zinc-200/50'
-          : 'bg-transparent'
+        isScrolled
+          ? 'bg-bone-50/80 backdrop-blur-xl shadow-soft border-b border-zinc-200/50'
+          : isMenuOpen
+            ? 'bg-bone-50 border-b border-zinc-200 shadow-sm'
+            : 'bg-transparent'
       }`}
     >
       {/* 顶部信息栏 - 桌面端 */}
@@ -363,7 +366,7 @@ export default function Navbar() {
           <Link
             to="/cart"
             className={`relative p-2 ${
-              shouldUseDarkNavbar ? 'text-zinc-800' : 'text-white'
+              isMenuBgVisible ? 'text-zinc-800' : 'text-white'
             }`}
             aria-label="购物车"
           >
@@ -378,7 +381,7 @@ export default function Navbar() {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className={`p-2 transition-colors ${
-              shouldUseDarkNavbar ? 'text-zinc-800 hover:text-forest-700' : 'text-white hover:text-amber-400'
+              isMenuBgVisible ? 'text-zinc-800 hover:text-forest-700' : 'text-white hover:text-amber-400'
             }`}
             aria-label={isMenuOpen ? '关闭菜单' : '打开菜单'}
           >
