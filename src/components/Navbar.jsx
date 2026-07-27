@@ -392,9 +392,10 @@ export default function Navbar() {
 
       {/* 移动端菜单 */}
       <div
-        className={`md:hidden fixed inset-x-0 top-16 bottom-0 bg-bone-50 transition-transform duration-500 ease-expo ${
+        className={`md:hidden fixed inset-x-0 top-16 z-50 bg-bone-50 transition-transform duration-500 ease-expo ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
+        style={{ height: 'calc(100dvh - 4rem)' }}
       >
         <div className="p-6 flex flex-col gap-1 overflow-y-auto h-full">
           {navLinks.map((link, index) => (
